@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {useState} from 'react';
+import TodoTemplate from './components/TodoTemplate';
+import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
+const App = () =>{
+  const [todos, setTodos] = useState([
+    {id:1, text:'잠자기', checked : true},
+    {id:2, text:'리액트 공부', checked : true},
+    {id:3, text:'7시 기상', checked : true},
+    {id:4, text:'출근하기', checked : false}
+  ]);
+  return <TodoTemplate>
+    <TodoInsert/>
+    <TodoList todos={todos}/>
+    </TodoTemplate>
 }
 
 export default App;
