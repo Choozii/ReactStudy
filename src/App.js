@@ -38,7 +38,6 @@ const App = () => {
   const onRemove = useCallback(
     id => {
       setTodos(todos.filter(todo => todo.id != id));
-      nextId.current -= 1;
     },
     [todos],
   )
