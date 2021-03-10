@@ -22,4 +22,4 @@ const { id, text, checked} = todo;
 )
 }
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
