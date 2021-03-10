@@ -23,7 +23,7 @@ const App = () => {
       checked: false
     }
   ]);
-  const nextId = useRef(4);
+  const nextId = useRef(5);
   
   const onInsert = useCallback(text => {
     const todo = {
@@ -38,6 +38,7 @@ const App = () => {
   const onRemove = useCallback(
     id => {
       setTodos(todos.filter(todo => todo.id != id));
+      nextId.current -= 1;
     },
     [todos],
   )
