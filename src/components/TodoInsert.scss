@@ -1,6 +1,6 @@
 .TodoInsert{
     display : flex;
-    background: #495057;
+    background: #9cd6df;
     input{
         background: none;
         outline: none;
@@ -10,7 +10,10 @@
         line-height: 1.5;
         color: white;
         &::placeholder{
-            color : #dee2e6;
+            color : white;
+            opacity : 0.5;
+            font-size : 1rem;
+            padding-left: 0.5rem;
         }
         flex : 1;
     }
@@ -18,7 +21,7 @@
         background : none;
         outline : none;
         border : none;
-        background: #868e96;
+        background: #9cd6df;
         color: white;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -28,7 +31,7 @@
         cursor: pointer;
         transition : 0.1s background ease-in;
         &:hover{
-            background: #adb5bd;
+            background: #8fd3dd;
         }
         
     }
